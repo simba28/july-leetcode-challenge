@@ -30,7 +30,7 @@ class Solution:
         
         # by just looking at the last element
         '''
-        = -1
+        i = -1
         l = len(digits)
         while True:
             if digits[i] == 9:
