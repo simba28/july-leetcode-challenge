@@ -14,10 +14,11 @@ class Solution:
         res = []
         queue = [root]
         
+        i = 0
         while queue:
             size = len(queue)
             temp = []
-            for i in range(size):
+            for _ in range(size):
                 
                 current = queue.pop()
                 temp.append(current.val)
@@ -26,10 +27,10 @@ class Solution:
                 if current.right:
                     queue.insert(0,current.right)
                     
-            res.append(temp)
-        
-        for i in range(len(res)):
             if i%2 != 0:
-                res[i] = res[i][::-1]
-                
+                res.append(temp[::-1])
+            else:
+                res.append(temp)
+            i += 1
+           
         return res
