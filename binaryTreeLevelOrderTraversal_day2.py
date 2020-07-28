@@ -6,7 +6,7 @@
 #         self.right = right
 
 class Solution:
-    def levelOrderBottom(self, root: TreeNode) -> List[List[int]]:
+    def levelOrderBottom(self, root):
         
         result = []
         
@@ -20,7 +20,7 @@ class Solution:
         while queue:
             size = len(queue)
             currentLevel = []
-            for i in range(size):
+            for _ in range(size):
                 current = queue.pop()
                 currentLevel.append(current.val)
                 
